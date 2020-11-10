@@ -7,5 +7,13 @@
   <CheckRevocation/> <!-- Check loaded drivers, log if their code-signing certification has been revoked, in case malware stole one to sign a kernel driver --> 
   
   <EventFiltering>
+    <!-- Here is where the process event filtering for sysmon will go?? --> 
+    <!-- All processes launched will be logged, except for what matches a rule below? Be as specific as possible to avoid user-mode xecutables imitating other proccesses 
+      to avoid logging, or if malware dorps files in an existing directory. Beware of masquerading, where attackers imitage the names and paths of legitimate tools. 
+      Ideally, you'd use both files and path and code signatures to validate, buth sysmon does not support that. For this, look into AppLocker/WindowsDeviceGuard for 
+      whitelisting support --> 
+    
+    <!--DATA: UtcTime, ProcessGuid, ProcessID, Image, FileVersion, Description, Product, Company, CommandLine, CurrentDirectory, User, LogonGuid, LogonId, TerminalSessionId, IntegrityLevel, Hashes, ParentProcessGuid, ParentProcessId, ParentImage, ParentCommandLine, RuleName-->
+    
   </EventFiltering>
 </Sysmon>
