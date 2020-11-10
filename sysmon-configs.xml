@@ -1,3 +1,6 @@
 <!--
   This is going to be a test file for sysmon configuration files 
 -->
+<Sysmon schemaversion="4.22">
+  
+</Sysmon>
